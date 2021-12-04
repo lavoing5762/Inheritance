@@ -14,9 +14,12 @@ from django.urls import reverse
 class artifacts(models.Models):
     artifact_title = models.CharField(
         max_length=50, help_text='Enter name of Artifact')
+    artifact_type = (('heirloom', 'HEIRLOOM'), ('inspirational', 'INSPIRATIONAL'), ('educational', 'EDUCATIONAL'), ('emotional', 'EMOTIONAL'), ('wisdom', 'WISDOM'), ('abstract', 'ABSTRACT'), ('culture', 'CULTURAL'), ('political', 'POLITICAL'), ('national', 'NATIONAL'), ('graphical', 'GRAPHICAL'), ('musical', 'MUSICAL'), ('lyrical', 'LYRICAL'), ('poetic', 'POETIC'), ('beautiful',
+                     'BEAUTIFUL'), ('complimentary', 'COMPLIMENTARY'), ('foundational', 'FOUNDATIONAL'), ('indulgent', 'INDULGENT'), ('decadent', 'DECADENT'), ('comforting', 'COMFORTING'), ('luxurious', 'LUXURIOUS'), ('basic', 'BASIC'), ('historical', 'HISTORICAL'), ('illuminating', 'ILLUMINATING'), ('nuturing', 'NUTUTRING'), ('intellectual', 'INTELLECTUAL'), ('fashionable', 'FASHIONABLE'))
     artifact_summary = models.CharField(
         max_length=250, help_text='Enter description of Artifact')
-    inheritance_date = models.DateField()
+    inheritance_date = models.DateField(
+        help_text='Enter committment of artifact date')()
     contributor = models.CharField(max_length=50, help_text='Enter your name')
     artifact_image = models.TextField()
     # access_key assignment to be determined
