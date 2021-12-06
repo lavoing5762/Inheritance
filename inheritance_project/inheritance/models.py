@@ -18,7 +18,7 @@ class artifacts(models.Models):
     artifact_type = (
 
         ('heirloom', 'HEIRLOOM'), ('inspirational', 'INSPIRATIONAL'), ('educational', 'EDUCATIONAL'), ('emotional', 'EMOTIONAL'), ('wisdom', 'WISDOM'), ('abstract', 'ABSTRACT'), ('culture', 'CULTURAL'), ('political', 'POLITICAL'), ('national', 'NATIONAL'), ('graphical', 'GRAPHICAL'), ('musical', 'MUSICAL'), ('lyrical', 'LYRICAL'), ('poetic', 'POETIC'), ('beautiful',
-                                                                                                                                                                                                                                                                                                                                                                    'BEAUTIFUL'), ('complimentary', 'COMPLIMENTARY'), ('foundational', 'FOUNDATIONAL'), ('indulgent', 'INDULGENT'), ('decadent', 'DECADENT'), ('comforting', 'COMFORTING'), ('luxurious', 'LUXURIOUS'), ('basic', 'BASIC'), ('historical', 'HISTORICAL'), ('illuminating', 'ILLUMINATING'), ('nuturing', 'NUTUTRING'), ('intellectual', 'INTELLECTUAL'), ('fashionable', 'FASHIONABLE')
+                                                                                                                                                                                                                                                                                                                                                                    'BEAUTIFUL'), ('complimentary', 'COMPLIMENTARY'), ('foundational', 'FOUNDATIONAL'), ('indulgent', 'INDULGENT'), ('decadent', 'DECADENT'), ('comforting', 'COMFORTING'), ('luxurious', 'LUXURIOUS'), ('basic', 'BASIC'), ('historical', 'HISTORICAL'), ('illuminating', 'ILLUMINATING'), ('nuturing', 'NUTUTRING'), ('intellectual', 'INTELLECTUAL'), ('fashionable', 'FASHIONABLE'), ('entertainment', 'ENTERTAINMENT')
     )
 
     artifact_summary = models.CharField(
@@ -62,6 +62,8 @@ class contributor(models.Model):
     last_name = models.CharField(max_length=100)
     date_of_birth = models.DateField(null=True, blank=True)
     date_of_death = models.DateField('Died', null=True, blank=True)
+    artifact = models.ForeignKey(
+        'Artifact', on_delete=models.RESTRICT, null=True)
 
     class Meta:
         ordering = ['']  # Sort by field name.
