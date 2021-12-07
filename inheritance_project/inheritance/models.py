@@ -11,7 +11,7 @@ from django.urls import reverse
 # To generate URLS by reversing URL patterns
 
 
-class artifacts(models.Models):
+class artifacts(models.Model):
     artifact_title = models.CharField(
         max_length=25, help_text='Enter name of Artifact')
 
@@ -23,8 +23,8 @@ class artifacts(models.Models):
 
     artifact_summary = models.CharField(
         max_length=250, help_text='Enter description of Artifact')
-    inheritance_date = models.DateField(
-        help_text='Enter committment of artifact date')()
+    inheritance_date = models.DateField
+    help_text = 'Enter committment of artifact date'()
     contributor = models.CharField(max_length=50, help_text='Enter your name')
     artifact_image = models.TextField()
     # access_key assignment to be determined
