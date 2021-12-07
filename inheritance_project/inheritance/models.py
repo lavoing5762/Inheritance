@@ -23,8 +23,8 @@ class artifacts(models.Model):
 
     artifact_summary = models.CharField(
         max_length=250, help_text='Enter description of Artifact')
-    inheritance_date = models.DateField
-    help_text = 'Enter committment of artifact date'()
+    inheritance_date = models.DateField(
+        help_text='Enter committment of artifact date'())
     contributor = models.CharField(max_length=50, help_text='Enter your name')
     artifact_image = models.TextField()
     # access_key assignment to be determined
