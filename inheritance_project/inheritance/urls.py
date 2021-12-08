@@ -7,3 +7,4 @@ urlpatterns = [
     path('addartifact', views.addartifact, name='addartifact'),
     path('gallery', views.gallery, name='gallery'),
 ]
+
