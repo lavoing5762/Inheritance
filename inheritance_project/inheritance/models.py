@@ -1,5 +1,3 @@
-
-
 # Required for unique artiface instances.  Example, black and white filtering, sepia_tone, and color.  Creates unique id for artifact.
 import uuid
 from django.db import models
