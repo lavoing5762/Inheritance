@@ -1,1 +1,38 @@
-<h1>Landing Page</h1>
+
+<!DOCTYPE html>
+{% extends 'main.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block content%}
+    <h1>LANDING PAGE</h1>
+    <br/>
+    <button type="button"> 
+        <a href="{% url 'ourstory' %}">OUR STORY</a>
+    </button>
+    <br/>
+    <button type="button"> 
+        <a href="{% url 'gallery' %}">GALLERY</a>
+    </button>
+    <br/>
+    <button type="button"> 
+        <a href="{% url 'addartifact' %}">ADD ARTIFACT</a>
+    </button>
+    <br/>
+    <button type="button">BROWSE</button>
+    <br/>
+    <form>
+        <input type="text" id="symbolicRelease" name="symbolic_release" placeholder="symbolic release: unburdened from ..." title="SYMBOLIC RELEASE" />
+        <input type="submit" id="symRelSubmitBtn" name="sym_rel_submit_btn" value="SUBMIT" />
+    </form>
+
+    {% endblock content %}
+</body>
+</html>
+
