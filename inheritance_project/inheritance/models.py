@@ -2,10 +2,10 @@
 import uuid
 from django.db import models
 from django.db.models.deletion import RESTRICT
-
+from django.urls import reverse
 # Create your models here.
 
-from django.urls import reverse
+
 
 # To generate URLS by reversing URL patterns
 
@@ -106,3 +106,12 @@ class Contributor(models.Model):
 
     def __str__(self):
         return f'{self.last_name}, {self.first_name}'
+
+# This class is to upload the image   
+class Image(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='images')
+    def __str__(self):
+        return self.title
+    class Meta:
+        db_table = "myapp_image"
