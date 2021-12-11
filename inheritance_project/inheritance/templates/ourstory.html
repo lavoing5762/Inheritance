@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
-{% extends 'main.html' %}
-<html lang="en">
+    {% extends 'main.html' %}
+    <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +16,11 @@
         <a href="{% url 'landingpage' %}">LANDING PAGE</a>
     </button>
     <br/>
+    <br/>
     <button type="button"> 
         <a href="{% url 'gallery' %}">GALLERY</a>
     </button>
+    <br/>
     <br/>
     <button type="button"> 
         <a href="{% url 'addartifact' %}">ADD ARTIFACT</a>
@@ -39,7 +41,7 @@
 <br/>
 <br/>
     <h2>JOIN</h2>        
-        </p>Upload an image of your selection on the Inheritance <a href="" class="addArtifactLink">ADD ARTIFACT page</a>. Tell us why it’s important, describe it in the description. Join the vibrant Inheritance community of those gifting one thing they believe would benefit the world.</p>
+        </p>Upload an image of your selection on the Inheritance <a href="{% url 'addartifact' %}">ADD ARTIFACT</a>. Tell us why it’s important, describe it in the description. Join the vibrant Inheritance community of those gifting one thing they believe would benefit the world.</p>
     {% endblock content %}
 </body>
 </html>
