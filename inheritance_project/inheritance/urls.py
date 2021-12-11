@@ -6,5 +6,5 @@ urlpatterns = [
     path('ourstory', views.ourstory, name='ourstory'),
     path('addartifact', views.addartifact, name='addartifact'),
     path('gallery', views.gallery, name='gallery'),
-]
 
+]
