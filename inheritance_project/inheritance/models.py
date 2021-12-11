@@ -13,6 +13,7 @@ from django.urls import reverse
 class Artifact(models.Model):
     artifact_title = models.CharField(
         max_length=25, help_text='Enter name of Artifact')
+    #artifact_img = models.ImageField(upload_to='images')
 
     artifact_type = (
 
