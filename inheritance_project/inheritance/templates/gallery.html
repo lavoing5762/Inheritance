@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
-{% extends 'main.html' %}
-<html lang="en">
+    {% extends 'main.html' %}
+    <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,16 +11,20 @@
 
 <body>
     {% block content %}
+    <h1>GALLERY</h1>
+    <button type="button">BROWSE</button>
+    <br/>
+    <br/>
     <button type="button"> 
         <a href="{% url 'addartifact' %}">ADD ARTIFACT</a>
     </button>
     <br/>
-    <button type="button">BROWSE</button>
     <br/>
     <div class="btn-group">
         <a href="#" class="btn btn-light">&#8810;</a>
         <a href="#" class="btn btn-light">&#8811;</a>
     </div>
+    <br/>
     <br/>
     <button type="button"> 
         <a href="{% url 'landingpage' %}">HOME</a>
@@ -28,7 +32,6 @@
     <br/>
     <br/>
 
-    <h1>GALLERY</h1>
     {% endblock content %}
 </body>
 </html>

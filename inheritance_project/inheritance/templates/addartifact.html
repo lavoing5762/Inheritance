@@ -1,27 +1,49 @@
-
-
- <!DOCTYPE html>
- 
- <html lang="en">
- <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta name="description" content="">
-   <meta name="author" content="">
-   <title>Add Artifact</title>
- </head>
- <body>
- <p><h1>Add Artifact</h1></p>
+<!DOCTYPE html>
+    {% extends 'main.html' %}
+    <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Add Artifact</title>
+</head>
+    <br/>
+    <br/>
+<body>
+    {% block content %}
+    <button type="button"> 
+    <a href="{% url 'gallery' %}">GALLERY</a> 
+    </button>
+    <br/>
+    <br/>
+    <button type="button"> 
+    <a href="{% url 'landingpage' %}">HOME</a>
+    </button>
+    <br/>
+    <br/>
 <!-- Post images on add artifact page -->
- <form method="post" enctype="multipart/form-data">
-   {% csrf_token %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
     {{ form.as_p }}
-   <button type="submit">Upload</button>
- </form>
- {% if img_obj %}
-   <h3>Succesfully uploaded : {{img_obj.title}}</h3>
-   <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
- {% endif %}
- </body>
- </html>
+    <button type="submit">Upload Artifact</button>
+    <button type="button">Delete Artifact</button>
+    <br/>
+    <br/>
+<form action="/form/submit" method="post">
+      <label for="text">Artifact Description:</label>
+      <br>
+      <textarea id="text" name="text" rows="12" cols="50"></textarea>
+      <br/>
+      <input type="submit" value="Submit">
+</form>
+<br/>
+</form>
+    {% if img_obj %}
+    <h3>Artifact uploaded! : {{img_obj.title}}</h3>
+    <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+    {% endif %}
+    {% endblock content %}
+</body>
+</html>
 

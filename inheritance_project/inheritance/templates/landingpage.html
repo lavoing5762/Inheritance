@@ -1,31 +1,37 @@
 
 <!DOCTYPE html>
-{% extends 'main.html' %}
-<html lang="en">
+    {% extends 'main.html' %}
+    <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+    <br/>
+    <br/>
 <body>
     {% block content%}
     <h1>LANDING PAGE</h1>
+    <br/>
     <br/>
     <button type="button"> 
         <a href="{% url 'ourstory' %}">OUR STORY</a>
     </button>
     <br/>
+    <br/>
     <button type="button"> 
         <a href="{% url 'gallery' %}">GALLERY</a>
     </button>
+    <br/>
     <br/>
     <button type="button"> 
         <a href="{% url 'addartifact' %}">ADD ARTIFACT</a>
     </button>
     <br/>
+    <br/>
     <button type="button">BROWSE</button>
+    <br/>
     <br/>
     <form>
         <input type="text" id="symbolicRelease" name="symbolic_release" placeholder="symbolic release: unburdened from ..." title="SYMBOLIC RELEASE" />
