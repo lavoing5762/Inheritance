@@ -1,20 +1,10 @@
 
-#from django import forms
-#from .models import *
-
-# class Artifact_form(forms.ModelForm):
-
-# class Meta:
-#model = Artifact
-#fields = ['artifact_img']
-
 from django import forms
-from inheritance.models import Image
+from .models import *
 
-
-
-class ImageForm(forms.ModelForm):
-    # Form for the image model
-    class Meta:
-        model = Image
-        fields = ('title', 'image')
+# added editor form to these attributes
+class EditorForm(forms.Form):
+    title = forms.CharField(max_length=13, required=True)
+    description = forms.CharField(widget=forms.Textarea, required=True)
+    img_link = forms.URLField(required=True)
+    
