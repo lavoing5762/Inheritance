@@ -41,6 +41,7 @@ Walter Dunn Jr.<br>
 
 **USE PIP TO INSTALL PROJECT DEPENDENCIES:**<br>
 1. if installing after cloning a repo, run *`pip install -r requirements.txt`* to execute the command to read the requirements file and install everything in it
+
 2. if pip is already installed and want to install a package, run *`pip install [insertpackagenamehere]`*<br>
     2a. next run *`pip freeze > requirements.txt`*<br>
     2b. this command creates a file called *requirements.txt* while populating the file with dependencies resulting from the install command in step 1 above. from the command line aka terminal run *`cat requirements.txt`* to view dependencies listed in the file 
@@ -75,3 +76,25 @@ Quit the server with CONTROL-C.
 <br>
 
 **note:** the above message means the django application is running, you must visit the `http://127.0.0.1:8000/` link to access the django application in browser. [the django welcome/homepage](images/django-welcome-homepage.png) may look like an error or exception. this is until you read what it says and follow the instructions to add url endpoints per your project into the browser. for example, `http://127.0.0.1:8000`/(insert your url endpoint here without including the parentheses).
+<br>
+<br>
+
+<img src="Images/landing_page.jpg" title="" alt=""/>
+Landing Page establishes overall ambiance and navigation. It also, through SYMBOLIC RELEASE, demonstrates our elevated dedication to self-awareness and holistic health.
+
+<br>
+
+<img src="Images/our_story.jpg" title="" alt=""/>
+Our Story shares insight, intent, self-awareness, and sense of community at the heart of the creation of Inheritance. 
+
+<br>
+
+<img src="Images/add_artifact.jpg" title="" alt=""/>
+Add Artifact is the opportunity to consider what you will add to the story. In other words, what image and description you would submit as an artifact.
+
+<br>
+
+<img src="Images/gallery.jpg" title="" alt=""/>
+Gallery is a collection of the vibrancy of contributions to the Inheritance community through shared artifacts.
+
+<br>

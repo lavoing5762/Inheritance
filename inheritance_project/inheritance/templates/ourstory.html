@@ -1,20 +1,18 @@
-<!DOCTYPE html>
+<!-- shares insight into the vision behind the creation of Inheritance -->
 {% extends 'main.html' %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inheritance Our Story</title>
-</head>
 
-<body>
     {% block content %}
-    <button type="button">HOME</button>
+    <button type="button">
+        <a href="{% url 'landingpage' %}">HOME</a>
+    </button>
     <br/>
-    <button type="button">GALLERY</button>
+    <button type="button">
+        <a href="{% url 'gallery' %}">GALLERY</a>
+    </button>
     <br/>
-    <button type="button">ADD ARTIFACT</button>
+    <button type="button"> 
+        <a href="{% url 'addartifact' %}">ADD ARTIFACT</a>
+    </button>
     <br/>
     <br/>
 
@@ -31,7 +29,7 @@
 <br/>
 <br/>
     <h2>JOIN</h2>        
-        </p>Upload an image of your selection on the Inheritance <a href="" class="addArtifactLink">ADD ARTIFACT page</a>. Tell us why it’s important, describe it in the description. Join the vibrant Inheritance community of those gifting one thing they believe would benefit the world.</p>
+        </p>Upload an image of your selection on the Inheritance <a href="{% url 'addartifact' %}" class="addArtifactLink">ADD ARTIFACT page</a>. Tell us why it’s important, describe it in the description. Join the vibrant Inheritance community of those gifting one thing they believe would benefit the world.</p>
     {% endblock content %}
-</body>
-</html>
+    
+
